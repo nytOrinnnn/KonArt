@@ -1,0 +1,376 @@
+@font-face {
+    font-family:Montserrat;
+    src: url(font/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family:Montserrat-bold;
+    src: url(font/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family:Montserrat-ExtraBold;
+    src: url(font/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family:Montserrat-light;
+    src: url(font/Montserrat-Light.ttf);
+}
+
+@keyframes popupLtR{
+    from{
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes popup{
+    from{
+        opacity: 0%;
+        transform: scale(0%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0%;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}   
+
+body{
+    background-color: rgb(15, 1, 1);
+}
+
+.container {
+    width: 100%;
+    height: 730px;
+    background:linear-gradient(rgb(0, 0, 0, 0.70) ) ,url(bgknfx.jpg);
+    
+    background-size: cover;
+}
+
+.navi {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 120px;
+    cursor: pointer;
+}
+
+.menus {
+    text-decoration: none;
+    
+}
+
+.navi ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    
+    
+}
+.navi ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navi ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navi ul li:hover::after{ 
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: orange;
+    position: absolute; 
+    left: 0;
+    bottom: -5px;
+}
+
+.contact {
+    padding: 10px;
+    background-color: transparent;
+    width: 150px;
+    border-radius: 20px;
+    border: solid 2px;
+    border-color: white;
+    transition: ease-out 0.5s;
+}
+.contact a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.contact:hover {
+    background-color: orange;
+    text-transform: uppercase;
+    width: 160px;
+    padding: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.theCon {
+    display: flex;
+    margin-left: 1in;
+    margin-top: 0in;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    color: white;
+    font-size: 25px;
+    margin-top: -1in;
+    font-family: Impact, sans-serif;
+}
+
+.text h1{
+    transition: ease-in 0.5s;
+}
+
+.text h1:hover {
+    color: orange;
+    
+    
+    
+}
+
+.pecture {
+    height: 650px;
+    margin-right: 1in;
+    margin-top: -0.5in;
+    transition: ease-in-out 1s;
+}
+
+.pecture:hover {
+    height: 700px;
+
+}
+
+
+.theCon button {
+    margin: 30px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 15px;
+    background: transparent;
+    border:solid, white;
+    cursor: pointer;
+    
+
+}
+
+.theCon button a{
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+
+.theCon button:hover {
+    background-color: orange;
+    
+    transition-duration: 1s;
+     
+
+}
+
+
+.container2 {
+    justify-content: space-between;
+    display: inline-flex;
+    margin-top: 1.5IN;
+    
+}
+
+.aboutme{
+    margin-left: 1in;
+    margin-right: 50px;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Montserrat-light';
+    animation: popupLtR 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0%;
+
+}
+
+.aboutme span{
+    color: rgb(255, 187, 39);
+}
+
+.aboutme h1{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    font-family: 'Montserrat';
+    color: rgb(255, 187, 39);
+    font-size: 70px;
+}
+
+.aboutme h1::after{
+    content: '';
+    background-color: white;
+    width: 0%;
+    height: 3pxpx;
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    transition: 0.5s;
+}
+
+.aboutme h1:hover::after{ 
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: rgb(246, 246, 246);
+    position: absolute; 
+    left: 0;
+    bottom: 7px;
+}
+.shimarin{
+    opacity: 100%;
+    width: 500px;
+    height: 500px;
+    margin-left: 100PX;
+    
+    
+}
+
+.shimapic{
+    position: relative;
+}
+.shimapic div{
+    position: absolute;
+    opacity: 10%;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    margin-left: 100PX;
+    transition: ease-in 0.5s;
+    
+}
+
+.shimapic div:hover{
+    position: absolute;
+    opacity: 60%;
+    background: linear-gradient(to top, rgb(38, 18, 0), black, transparent);
+    width: 500px;
+    height: 500px;
+    margin-left: 100PX;
+    color: white;
+}
+
+.shimapic div h2{
+    margin-left: 15px;
+    opacity: 100%;
+    margin-top: 4in;
+    font-style: italic;
+}
+
+.shimapic div h2 span{
+    opacity: 100%;
+    color: rgb(255, 196, 0);
+    margin-top: 4in;
+}
+
+.divider1{
+    margin-top: 1.5in;
+    height: 3px;
+    width: 100%;
+    opacity: 50%;
+    background-color: white;
+}
+
+
+.containerSkills{
+    position: absolute;
+    display: block;
+    margin: 50px;
+    margin-top: 1.5in;
+    
+}
+
+.containerSkills h1{
+    color: rgb(255, 187, 39);   
+    font-family: 'Montserrat';
+    font-size: 100px;
+    font-style: italic; 
+    text-align: center;
+    animation: popupLtR 0.3s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    
+}
+.containerSkills h1 span{
+    color: rgb(255, 187, 39);   
+    font-family: 'Montserrat';
+    font-size: 100px;
+    font-style: italic;
+    text-align: center;
+    
+}
+
+.containerSkills img{
+    width: 390px;
+    height: 550px;
+    margin: 35px;
+    border: solid white;
+    animation: popup 0.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.containerSkills img:hover{
+    width: 400px;
+    height: 560px;
+    margin: 35px;
+    border: solid white;
+    animation: popup 0.5s linear;
+    box-shadow: 1px 1px 20px rgb(255, 200, 0);
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
